@@ -1,9 +1,5 @@
 # cucumber-playwright
 
-![Test](https://github.com/Tallyb/cucumber-playwright/workflows/Test/badge.svg)
-
-A starter repo for writing E2E tests based on Cucumber(7) with Playwright using Typescript.
-
 ## Kudos
 
 This repository is based on the [Cucumber-typescript-starter](https://github.com/hdorgeval/cucumber7-ts-starter/) repo.
@@ -20,12 +16,16 @@ This repository is based on the [Cucumber-typescript-starter](https://github.com
 
 ## Usage
 
-Create a repo based on this template and start writing your tests.
+1. Add your Cucumbers features (`playwright.feature.ts`) in the feature folder
+2. Create steps (`yourFeature.steps.ts`) for your features in src/steps
+3. Ad utility methods in src/utils
+4. If needed, modify the CustomWorld class and before-after hooks in src/support 
 
 ## To run your tests
 
-`npm run test` or `npx cucumber-js` runs all tests
-`npm run test <feature name>` or `npx cucumber-js <feature name>` run the single feature
+- `npm run test` or `npx cucumber-js` runs all tests
+- `npm run test <feature name>` or `npx cucumber-js --name <feature name>` run the single feature
+- `npx cucumber-js --tags <your tags names>` runs all test with the listed tags
 
 ## Browser selection
 
@@ -42,10 +42,6 @@ One Windows you need to write
 set BROWSER=firefox
 npm run test
 ```
-
-## Working with Page Objects
-
-I am not fond of the Page Object Model (POM) for testing. It feels like a leftover from Java world, and I do not think it fits the Javascript world. However, you can check [this PR](https://github.com/Tallyb/cucumber-playwright/pull/95/files) to see POM implementation. 
 
 ## Debugging Features
 
